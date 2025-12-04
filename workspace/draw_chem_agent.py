@@ -150,39 +150,42 @@ class DrawChemAgent(object):
         调用大模型 API生成图片
         图片自动保存到output_dir目录下
         """
-        # 调用litellm库的异步completion接口，传入模型名称和用户消息
-        response = await litellm.acompletion(
-            model=self.model_gemini_3_pro_image,
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-        )
+        try:
+            # 调用litellm库的异步completion接口，传入模型名称和用户消息
+            response = await litellm.acompletion(
+                model=self.model_gemini_3_pro_image,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+            )
     
-        # 遍历API返回的多个图像结果（如果有）
-        for i, img in enumerate(response.choices[0].message.images):
-            img_url = img["image_url"]["url"]
-        
-            # 处理base64编码的图像数据（URL可能包含data:image/png;base64,前缀）
-            if "," in img_url:
-                base64_data = img_url.split(",", 1)[1]
-            else:
-                print("Invalid image URL format.")
-                return None
-        
-            # 解码并保存图像
-            image_data = base64.b64decode(base64_data)
-            if i > 0:  
-                sub_name = image_name[:-4] + f"_{i}.png" 
-            else:
-                sub_name = image_name
-            file_path = os.path.join(output_dir, sub_name)  
-            with open(file_path, "wb") as f:
-                f.write(image_data)
+            # 遍历API返回的多个图像结果（如果有）
+            for i, img in enumerate(response.choices[0].message.images):
+                img_url = img["image_url"]["url"]
+            
+                # 处理base64编码的图像数据（URL可能包含data:image/png;base64,前缀）
+                if "," in img_url:
+                    base64_data = img_url.split(",", 1)[1]
+                else:
+                    print("Invalid image URL format.")
+                    return None
+            
+                # 解码并保存图像
+                image_data = base64.b64decode(base64_data)
+                if i > 0:  
+                    sub_name = image_name[:-4] + f"_{i}.png" 
+                else:
+                    sub_name = image_name
+                file_path = os.path.join(output_dir, sub_name)  
+                with open(file_path, "wb") as f:
+                    f.write(image_data)
 
-            print(f"Image saved to {file_path}")
-            
-            
+                print(f"Image saved to {file_path}")
+        except Exception as e:
+            print(f"An error occurred during generation: {e}")
     
+    def eval_image(self, image_path, prompt):
+        pass
     
 if __name__ == '__main__':
     propmt="生成两张关于气球的图片"

@@ -67,12 +67,14 @@
 <p><a href="@entry_id:204277">非晶固体</a>的形成过程被称为<strong><a href="@entry_id:142461">玻璃化转变</a> (glass transition)</strong>。当一个液体被冷却时，如果结晶被成功抑制，其黏度和<a href="@entry_id:263707">结构弛豫</a>时间 $\tau(T)$ 会随温度降低而急剧增加。<strong>玻璃化转变温度 (glass transition temperature)</strong> $T_g$ 并不是一个像<a href="@entry_id:195793">熔点</a>那样的<a href="@entry_id:141121">热力学</a><a href="@entry_id:147324">相变</a>点，而是一个动力学概念。它通常被操作性地定义为，在特定的冷却速率 $q_c$ 下，体系的<a href="@entry_id:263707">结构弛豫</a>时间 $\tau(T)$ 增长到与实验观测时间尺度（约等于 $T/|q_c|$）相当的温度。</p>
 <p>当 $T &gt; T_g$ 时，液体处于（亚稳的）<a href="@entry_id:168134">平衡态</a>，其结构能够跟随温度的变化而调整。当 $T  T_g$ 时，原子运动极其缓慢，结构被“冻结”，无法再达到对应温度下的<a href="@entry_id:168134">平衡态</a>，体系进入了非平衡的玻璃态。因此，$T_g$ 的值依赖于冷却速率：冷却速率越快，留给体系弛豫的时间越短，冻结就会发生在越高的温度。</p>
 <p>为了量化玻璃的非平衡状态，引入了<strong>虚构温度 (fictive temperature)</strong> $T_f$ 的概念。$T_f$ 定义为能使平衡液体的焓（或体积）等于当前玻璃样品在相同条件下焓（或体积）的温度，即 $H_{\text{glass}} = H_{\text{eq}}(T_f)$。$T_f$ 实质上记录了<a href="@entry_id:149053">玻璃结构</a>“冻结”时的温度快照。更快的冷却速率会捕获更高温度下的<a href="@entry_id:150165">液体结构</a>，从而导致更高的 $T_f$ 和更高的玻璃态焓 。</p>
+<p><img alt="826804_3.png" src="826804_3.png" /></p>
 <p>从更深层次的理论看，这种动力学急剧变缓的现象与体系的<strong><a href="@entry_id:147820">构型熵</a> (configurational entropy)</strong> $S_c(T)$ 密切相关。<a href="@entry_id:147820">构型熵</a>衡量了体系在宏观状态下可访问的微观结构（原子<a href="@entry_id:136432">排列</a>方式）的数量。<strong><a href="@entry_id:193039">Adam-Gibbs关系</a></strong>将弛豫时间与<a href="@entry_id:147820">构型熵</a>联系起来：$\tau(T) = \tau_0 \exp(A/[TS_c(T)])$。随着温度降低，$S_c(T)$ 减小，导致 $\tau(T)$ 呈超指数增长。理论上，当 $T$ 趋近于一个被称为<strong>Kauzmann温度</strong> $T_K$ 的点时，$S_c(T)$ 将外推至零，预示着<a href="@entry_id:191572">弛豫时间</a>的发散。这为理解<a href="@entry_id:142461">玻璃化转变</a>的根本原因——即随着冷却，可供体系探索的结构越来越少，最终导致动力学停滞——提供了<a href="@entry_id:141121">热力学</a>基础 。</p>
 <h3>物理性质的差异</h3>
 <p>晶体和非晶体在结构上的根本对立，深刻地影响了它们对电子和热的<a href="@entry_id:203130">输运性质</a>。</p>
 <h4>电子结构与输运</h4>
 <p>在完美的晶体中，电子运动于一个<a href="@entry_id:140652">周期性势场</a> $V(\mathbf{r})$中。根据<strong>布洛赫定理 (Bloch's Theorem)</strong>，电子的<a href="@entry_id:149904">本征态</a>是遍布整个晶体的<strong><a href="@entry_id:144558">布洛赫波</a> (Bloch waves)</strong>，形式为 $\psi_{n\mathbf{k}}(\mathbf{r}) = e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})$，其中 $u_{n\mathbf{k}}(\mathbf{r})$ 具有<a href="@entry_id:196752">晶格</a>的周期性。这些态由晶体动量 $\mathbf{k}$ 和能带指数 $n$ 来标记，其能量 $E_n(\mathbf{k})$ 在<a href="@entry_id:754151">倒易空间</a>的<a href="@entry_id:142395">布里渊区</a>内形成连续的<strong>能带 (energy bands)</strong>，并可能被<strong><a href="@entry_id:191975">能隙</a> (band gaps)</strong> 分隔。在这些<a href="@entry_id:138810">扩展态</a>中的电子可以自由运动，从而产生<a href="@entry_id:137481">导电性</a>。</p>
 <p>而在<a href="@entry_id:204277">非晶固体</a>中，长程周期性丧失，布洛赫定理不再适用。电子运动于一个<a href="@entry_id:144028">随机势</a>场中。这种无序导致了强烈的<a href="@entry_id:152152">弹性散射</a>。根据<strong><a href="@entry_id:137156">安德森定域</a>理论 (Anderson localization theory)</strong>，足够强的无序可以将电子<a href="@entry_id:147440">波函数</a><strong>定域 (localize)</strong> 在空间中的有限区域内。在三维系统中，通常存在一个<strong><a href="@entry_id:145044">迁移率边</a> (mobility edge)</strong> $E_c$，它将能量空间划分为两部分：能量处于<a href="@entry_id:145044">迁移率边</a>之外的态是<a href="@entry_id:138810">扩展态</a>，可以参与导电；而能量处于带尾、靠近<a href="@entry_id:145044">迁移率边</a>的态则是指数衰减的<a href="@entry_id:137880">定域态</a>，无法对宏观导电做出贡献。<strong><a href="@entry_id:140475">Ioffe-Regel判据</a></strong>提供了一个判断定域趋势的简单准则：当电子的平均自由程 $\ell$ 变得与其<a href="@entry_id:139033">德布罗意波长</a> $\lambda = 2\pi/k$ 相当时，即 $k\ell \approx 1$，半经典的<a href="@entry_id:167638">波包传播</a>图像失效，定域效应开始显现。如果<a href="@entry_id:143215">费米能级</a>落入<a href="@entry_id:137880">定域态</a>区域（即 $k_F\ell \lesssim 1$），则材料在低温下表现为绝缘体 。</p>
+<p><img alt="826804_4.png" src="826804_4.png" /></p>
 <h4><a href="@entry_id:267781">振动</a>激发与<a href="@entry_id:198424">热输运</a></h4>
 <p>晶体和非晶体中的<a href="@entry_id:198424">热输运</a>机制同样大相径庭。</p>
 <p>在晶体中，原子的集体<a href="@entry_id:267781">振动</a>被量子化为格波，即<strong><a href="@entry_id:140728">声子</a> (phonons)</strong>。<a href="@entry_id:140728">声子</a>是具有明确波矢 $\mathbf{q}$ 和能量的<a href="@entry_id:136584">准粒子</a>，它们像气体分子一样在晶体中传播并携带热量。热导率可以通过<a href="@entry_id:140728">声子</a>的<a href="@entry_id:140472">玻尔兹曼输运方程</a>来描述，其形式类似于气体动理论：$k \propto C v l$，其中 $C$ 是比热，$v$ 是<a href="@entry_id:140728">声子</a>群速度，$l$ 是<a href="@entry_id:139563">平均自由程</a>。在高温下，<a href="@entry_id:140728">声子</a>平均自由程主要受<a href="@entry_id:140728">声子</a>-<a href="@entry_id:140728">声子</a>非简谐相互作用限制，特别是需要倒易格矢参与的<strong>昂克拉普散射 (Umklapp scattering)</strong>，它不守恒<a href="@entry_id:143609">晶格动量</a>，是产<a href="@entry_id:167810">生热</a>阻的主要机制。这种散射的几率随温度升高而增加，导致热导率 $k \propto 1/T$。在极低温下，本征散射减弱，$l$ 主要由晶体尺寸 $L$ 决定（<a href="@entry_id:141251">弹道输运</a>），导致 $k \propto L$。</p>
@@ -98,12 +100,11 @@
 <h4>电子与光学性质</h4>
 <p>电子在周期性<a href="@entry_id:196752">晶格</a>中的行为（由能带理论描述）与在无序网络中的行为（通常涉及局域态和<a href="@entry_id:147344">跳跃输运</a>）截然不同，这种差异催生了多种重要技术。</p>
 <ul>
-<li>
-<p><strong><a href="@entry_id:147324">相变</a>存储器 (Phase-Change Memory, PCM):</strong> 这是一种非易失性存储技术，其核心在于利用特定材料（如硫系玻璃）在<a href="@entry_id:193348">晶态</a>和非晶态之间快速可逆的<a href="@entry_id:147324">相变</a>。由于<a href="@entry_id:193348">晶态</a>具有<a href="@entry_id:155156">长程有序</a>结构，电子可以在扩展的<a href="@entry_id:144558">布洛赫波</a>态中低散射地运动，表现出较低的电阻。相反，<a href="@entry_id:204035">非晶态</a>由于结构无序，电子态在能带边缘附近发生局域化，输运主要通过<a href="@entry_id:201301">热激活</a>的<a href="@entry_id:180953">跳跃过程</a>进行，导致<a href="@entry_id:266481">电阻率</a>急剧升高。这两个电阻状态的巨大差异（通常超过两到三个<a href="@entry_id:264888">数量级</a>）可以稳定地代表二进制的“0”和“1”，通过施加不同功率和时长的电脉冲实现加热和淬火，即可完成数据的写入和擦除。</p>
-</li>
-<li>
-<p><strong>非晶<a href="@entry_id:141536">半导体</a>:</strong> <a href="@entry_id:264655">非晶硅</a>（a-Si:H）是太阳能电池和薄膜晶体管等领域的重要材料。与晶体硅不同，<a href="@entry_id:264655">非晶硅</a>的结构无序导致其能带边缘出现所谓的“带尾态”（band tails）。这些源于键长、键角偏差的局域化能态延伸到传统<a href="@entry_id:191975">带隙</a>中。这些带尾态的<a href="@entry_id:136597">光吸收</a>遵循一个经验性的指数规律，称为<a href="@entry_id:269771">Urbach尾</a>（Urbach tail），其吸收系数 $\alpha$ 随光子能量 $h\nu$ 指数增长，即 $\alpha(h\nu) \propto \exp(h\nu/E_U)$。其中，$E_U$ 被称为<a href="@entry_id:267177">Urbach能量</a>，它直接量化了材料的结构无序度。通过测量材料在亚<a href="@entry_id:191975">带隙</a>区的<a href="@entry_id:136597">光吸收</a>谱，可以拟合得到 $E_U$ 值，从而评估材料的结构质量，这对于优化非晶<a href="@entry_id:141536">半导体</a>的光电性能至关重要。</p>
-</li>
+<li><strong><a href="@entry_id:147324">相变</a>存储器 (Phase-Change Memory, PCM):</strong> 这是一种非易失性存储技术，其核心在于利用特定材料（如硫系玻璃）在<a href="@entry_id:193348">晶态</a>和非晶态之间快速可逆的<a href="@entry_id:147324">相变</a>。由于<a href="@entry_id:193348">晶态</a>具有<a href="@entry_id:155156">长程有序</a>结构，电子可以在扩展的<a href="@entry_id:144558">布洛赫波</a>态中低散射地运动，表现出较低的电阻。相反，<a href="@entry_id:204035">非晶态</a>由于结构无序，电子态在能带边缘附近发生局域化，输运主要通过<a href="@entry_id:201301">热激活</a>的<a href="@entry_id:180953">跳跃过程</a>进行，导致<a href="@entry_id:266481">电阻率</a>急剧升高。这两个电阻状态的巨大差异（通常超过两到三个<a href="@entry_id:264888">数量级</a>）可以稳定地代表二进制的“0”和“1”，通过施加不同功率和时长的电脉冲实现加热和淬火，即可完成数据的写入和擦除。</li>
+</ul>
+<p><img alt="826804_5.png" src="826804_5.png" /></p>
+<ul>
+<li><strong>非晶<a href="@entry_id:141536">半导体</a>:</strong> <a href="@entry_id:264655">非晶硅</a>（a-Si:H）是太阳能电池和薄膜晶体管等领域的重要材料。与晶体硅不同，<a href="@entry_id:264655">非晶硅</a>的结构无序导致其能带边缘出现所谓的“带尾态”（band tails）。这些源于键长、键角偏差的局域化能态延伸到传统<a href="@entry_id:191975">带隙</a>中。这些带尾态的<a href="@entry_id:136597">光吸收</a>遵循一个经验性的指数规律，称为<a href="@entry_id:269771">Urbach尾</a>（Urbach tail），其吸收系数 $\alpha$ 随光子能量 $h\nu$ 指数增长，即 $\alpha(h\nu) \propto \exp(h\nu/E_U)$。其中，$E_U$ 被称为<a href="@entry_id:267177">Urbach能量</a>，它直接量化了材料的结构无序度。通过测量材料在亚<a href="@entry_id:191975">带隙</a>区的<a href="@entry_id:136597">光吸收</a>谱，可以拟合得到 $E_U$ 值，从而评估材料的结构质量，这对于优化非晶<a href="@entry_id:141536">半导体</a>的光电性能至关重要。</li>
 </ul>
 <h4>热学与力学性质</h4>
 <p><a href="@entry_id:140728">声子</a>（<a href="@entry_id:140970">晶格振动</a>的量子）和电子的输运同样深刻地受到结构有序度的影响，这在<a href="@entry_id:145521">热电材料</a>、<a href="@entry_id:159225">软磁材料</a>和结构材料中得到了广泛应用。</p>
@@ -121,6 +122,7 @@
 <p><strong>玻璃的普适<a href="@entry_id:267781">振动</a>异常：玻色峰:</strong> 在低温下，几乎所有玻璃材料的热学和动力学性质都表现出与对应晶体显著不同的“普适”行为。其中一个标志性特征是“玻色峰”（Boson Peak），即在太赫兹（THz）频率范围内，玻璃的<a href="@entry_id:142991">振动态密度</a>（Vibrational Density of States, VDOS）$g(\omega)$ 相对于德拜模型预测的 $g_D(\omega) \propto \omega^2$ 行为出现了一个超额。这表现为约化VDOS $g(\omega)/\omega^2$ 在一个特征频率 $\omega_{BP}$ 处出现峰值。现代物理学理论认为，玻色峰源于玻璃中弹性性质的不均匀性。声波的波长缩短到与弹性无序的特征关联长度 $\xi$ 相当时，会发生强烈的<a href="@entry_id:178255">瑞利散射</a>，导致<a href="@entry_id:140728">声子</a>不再是良定义的<a href="@entry_id:136584">准粒子</a>。这些散射模式与软区的准局域<a href="@entry_id:267781">振动</a>模式杂化，导致了在 $\omega_{BP} \sim v_T/\xi$（其中 $v_T$ 是横向声速）附近的<a href="@entry_id:147894">态密度</a>增强。玻色峰是理解玻璃中热、声输运和低温反常行为的核心。</p>
 </li>
 </ul>
+<p><img alt="826804_6.png" src="826804_6.png" /></p>
 <h3>动力学、<a href="@entry_id:147324">相变</a>与跨学科前沿</h3>
 <p>晶态与<a href="@entry_id:204035">非晶态</a>之间的<a href="@entry_id:197611">转变动力学</a>，以及它们在自然和人工系统中的共存与竞争，是<a href="@entry_id:152226">材料科学</a>的核心议题，并与生物、医药等领域紧密<a href="@entry_id:147634">交叉</a>。</p>
 <h4>玻璃化转变与材料加工</h4>
@@ -132,6 +134,7 @@
 <p><strong>非晶合金的设计与制备:</strong> 为了获得大块非晶合金，必须以足够快的冷却速率使熔体绕过结晶区。时间-温度-<a href="@entry_id:147324">相变</a>（TTT）图是描述等温<a href="@entry_id:180457">结晶动力学</a>的关键工具，图中的“C”形曲线标示了结晶开始所需的时间。曲线的“鼻子”处对应最快的结晶温度和最短的结晶时间。要形成玻璃，冷却曲线必须避免与TTT曲线相交。<a href="@entry_id:157869">临界冷却速率</a>（$R_c$）是指恰好与TTT曲线鼻子相切的冷却速率。通过Scheil加和定则等模型，可以利用<a href="@entry_id:159519">TTT图</a>数据估算出连续冷却条件下的<a href="@entry_id:157869">临界冷却速率</a>。这一原理指导着<a href="@entry_id:152226">材料科学</a>家通过调整合金成分来减缓<a href="@entry_id:180457">结晶动力学</a>（即将TTT曲线向右推），从而降低所需的<a href="@entry_id:157869">临界冷却速率</a>，实现更大尺寸非晶部件的制备。</p>
 </li>
 </ul>
+<p><img alt="826804_7.png" src="826804_7.png" /></p>
 <h4>生命与健康科学中的应用</h4>
 <ul>
 <li>
