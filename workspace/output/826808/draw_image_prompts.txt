@@ -1,0 +1,50 @@
+[
+    {
+        "position": "这种净指向液体内部的内向拉力导致表面分子比内部的分子具有更高的势能。",
+        "reason": "该位置紧随对表面张力分子起源的解释之后。一张图可以直观地展示液体内部和表面分子的受力差异，这是理解表面张力概念的根本。图中应对比内部分子受力平衡与表面分子受力不平衡的状态，清晰地传达“内向拉力”的来源。",
+        "prompt": "A minimalist, 2D scientific diagram illustrating the origin of surface tension. Use a clean, light-colored background. The diagram shows a cross-section of a liquid-gas interface. Depict liquid molecules as simple blue circles. Show one molecule in the bulk liquid, surrounded by other molecules, with small black arrows pointing to it from all directions, indicating balanced intermolecular forces. Show another molecule at the surface, with similar arrows pointing to it only from the sides and below (from within the liquid), and a single large, bold red arrow pointing downwards, labeled 'Net Inward Force'. The overall style is clean, academic, and uses a limited color palette (blue, black, red).",
+        "negative_prompt": "3D render, photorealistic, cartoonish, hand-drawn, cluttered, excessive text, dark background, complex molecular structures."
+    },
+    {
+        "position": "在力学平衡时，这些沿固体表面方向的力必须相互抵消，这便得到了著名的杨氏方程 (Young's equation) ：",
+        "reason": "这是引出核心概念“杨氏方程”的关键位置。一张图能完美地将抽象的方程与物理实体（液滴、固体、气体）联系起来，清晰地标注出接触角(θ)和三个界面张力(γ_sv, γ_sl, γ_lv)及其矢量方向，是解释该方程最直观的方式。",
+        "prompt": "A clear, schematic diagram of a liquid droplet on a flat, solid surface, illustrating Young's equation. Style: clean, academic, vector graphics. The diagram shows a single sessile drop. Clearly label the three phases: Solid (S), Liquid (L), and Gas (G). Draw and label the contact angle θ inside the liquid phase, formed by the solid-liquid interface and the tangent to the liquid-gas interface at the contact point. At the three-phase contact line, draw three vectors representing the interfacial tensions: γ_sv pointing away along the solid surface, γ_sl pointing inwards along the solid-liquid interface, and γ_lv pointing along the tangent of the liquid surface. The horizontal components of γ_sl and γ_lv should balance γ_sv. Use distinct colors for the vectors.",
+        "negative_prompt": "Messy, hand-drawn, incorrect vector directions, photorealistic water drop, complex background textures, unlabeled components."
+    },
+    {
+        "position": "其影响主要通过两种模型来描述 ：",
+        "reason": "此处引入了描述粗糙表面润湿性的两种经典模型：Wenzel和Cassie-Baxter。这两个模型的核心区别在于液体是否填充了粗糙结构的沟壑，这正是视觉化表达的强项。一张并排对比图能让读者一目了然地理解两种状态的形态差异。",
+        "prompt": "A two-panel scientific illustration comparing the Wenzel and Cassie-Baxter wetting states on a structured surface. Style: minimalist, schematic, tech-inspired. The surface is represented by a series of identical microscopic pillars. Left Panel (labeled 'Wenzel State'): A liquid droplet is shown conforming to the rough surface, with the liquid completely filling the gaps between the pillars. Right Panel (labeled 'Cassie-Baxter State'): A liquid droplet is shown resting on top of the pillars, with trapped air pockets (labeled 'Trapped Air') visible in the gaps underneath. Both panels should use the same color scheme for liquid, solid, and air to facilitate comparison. The visual focus should be on the different solid-liquid interfaces.",
+        "negative_prompt": "Photorealistic, 3D, complex pillar shapes, inconsistent scaling between panels, blurry, hand-drawn."
+    },
+    {
+        "position": "在任何有滞后效应的真实表面上，总有 $\\theta_A > \\theta_R$ 。",
+        "reason": "接触角滞后是一个动态概念，涉及到接触线前进和后退时的不同角度。通过一张在倾斜平面上即将滑动的液滴图，可以同时展示前进角(θ_A)和后退角(θ_R)，并直观地表现出 θ_A > θ_R 的关系，这是纯文本难以高效传达的。",
+        "prompt": "A schematic diagram illustrating contact angle hysteresis. A single liquid droplet is shown on a slightly inclined solid surface, on the verge of sliding down. The droplet is asymmetrically deformed. At the front (downhill) edge of the droplet, label the advancing contact angle (θ_A). At the rear (uphill) edge, label the receding contact angle (θ_R). The diagram must clearly show that θ_A is larger than θ_R. Add a subtle arrow parallel to the surface indicating the direction of incipient motion or the gravitational component. Use a clean, vector style with clear labels and angle arcs.",
+        "negative_prompt": "Symmetrical droplet, perfectly vertical or horizontal surface, angles labeled incorrectly or shown as equal, photorealistic."
+    },
+    {
+        "position": "液-气界面张力的垂直分量 $\\gamma_{lv}\\sin\\theta$ 会对柔软的固体施加一个向上的力，导致在三相接触线处形成一个微小的润湿脊 (wetting ridge) 。",
+        "reason": "“弹性毛细现象”和“润湿脊”是较为前沿且反直觉的概念。一张特写图可以清晰地展示柔软固体在表面张力作用下发生的局部变形，将抽象的“力”转化为可见的“形变”，极大地帮助读者理解这一复杂的固液耦合现象。",
+        "prompt": "A close-up, cross-sectional scientific diagram of the elastocapillarity effect. Show a liquid droplet resting on a soft, deformable solid substrate (e.g., a gel). At the three-phase contact line, the solid surface is visibly pulled upwards, forming a distinct 'wetting ridge'. Draw a vector for the liquid-vapor surface tension (γ_lv) tangent to the droplet surface at the contact line. Decompose this vector into its horizontal and vertical components. The vertical component should be shown clearly pulling up the solid substrate at the ridge's peak. Label the 'Wetting Ridge'. Style should be clean, schematic, with a focus on the geometry of the deformation.",
+        "negative_prompt": "Rigid solid with no deformation, exaggerated or cartoonish ridge, cluttered with unnecessary details, photorealistic."
+    },
+    {
+        "position": "液体自由表面上表面张力的不均匀分布会产生一种切向应力，从而驱动液体从低表面张力区域流向高表面张力区域，这种现象被称为Marangoni效应 (Marangoni effect)。",
+        "reason": "Marangoni流是由表面张力梯度驱动的，这是一个动态过程。静态图可以通过箭头清晰地指示出表面张力梯度方向和由此诱导的液体内部流动方向，将因（温度/浓度梯度）和果（宏观流动）联系起来，是解释该效应的标准图示方法。",
+        "prompt": "A schematic diagram illustrating the Marangoni effect due to a temperature gradient. Show a cross-section of a thin liquid film on a horizontal substrate. Label one side 'Hot (Low γ)' and the other side 'Cold (High γ)'. Use a color gradient (e.g., red to blue) on the substrate to represent the temperature gradient. On the free surface of the liquid, draw arrows pointing from the hot side to the cold side, labeled 'Marangoni Stress'. Within the bulk of the liquid, draw a set of curved arrows to depict the resulting convective roll or circulatory flow. The style should be a clean, academic fluid dynamics diagram.",
+        "negative_prompt": "Static image with no flow indication, 3D render, photorealistic, overly complex thermal plumes, hand-drawn."
+    },
+    {
+        "position": "以冷凝为例，蒸汽在固体表面的凝结可以分为膜状冷凝 (filmwise condensation) 和滴状冷凝 (dropwise condensation)。",
+        "reason": "膜状冷凝和滴状冷凝是传热学中的经典对比，其传热效率差异巨大。一张并排对比图可以直观地展示两种模式下液体在表面的形态：一层阻碍传热的液膜 vs. 快速脱落并裸露新表面的液滴。这能有力地支撑后文关于传热效率差异的论述。",
+        "prompt": "A two-panel comparative illustration of condensation modes. Style: clean, technical, academic. Left Panel (labeled 'Filmwise Condensation on Hydrophilic Surface'): Shows a vertical surface covered by a continuous film of condensed liquid. Add arrows indicating heat flow being impeded by the thick liquid film. Right Panel (labeled 'Dropwise Condensation on Hydrophobic Surface'): Shows a similar vertical surface but with discrete, spherical liquid droplets. One large droplet is shown rolling down, leaving a wiped-off trail. Heat transfer arrows should be shown as more efficient, passing through the bare surface areas. The background for both panels represents vapor.",
+        "negative_prompt": "Surfaces look identical, no indication of liquid motion or heat transfer, cluttered, photorealistic, cartoonish."
+    },
+    {
+        "position": "这种表面的核心设计思想是“功能分离”：在亲水（hydrophilic）的基底上构建疏水（hydrophobic）的斑点阵列。",
+        "reason": "双亲性表面是强化传热领域的一个精巧设计，其“功能分离”的原理需要图示来阐明。一张图可以清晰地展示疏水点如何作为成核位点，而亲水区域如何通过毛细作用补充液体，将两种润湿性的协同作用可视化，使复杂的概念变得易于理解。",
+        "prompt": "A schematic diagram illustrating boiling on a biphilic surface. The view is a close-up of a heated surface patterned with circular hydrophobic spots on a hydrophilic background. On one of the hydrophobic spots, show a vapor bubble nucleating and growing (labeled 'Bubble Nucleation Site'). Around the base of the bubble and on the surrounding hydrophilic area, draw small blue arrows pointing inwards toward the spot, labeled 'Liquid Rewetting by Capillary Action'. The diagram should clearly convey the separate functions of the two types of areas. Style: futuristic, clean, tech diagram with highlights and clear labels.",
+        "negative_prompt": "Monotonous uniform surface, no bubbles, no indication of wicking or flow, messy and cluttered, photorealistic."
+    }
+]

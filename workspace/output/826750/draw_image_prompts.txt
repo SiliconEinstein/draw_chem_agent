@@ -1,0 +1,44 @@
+[
+    {
+        "position": "点缺陷主要分为三种基本类型：**空位 (vacancy)**、**间隙 (interstitial)** 和 **替代 (substitutional)** 缺陷。",
+        "reason": "该位置首次引入点缺陷的三种基本类型，配图能够直观地展示这三种缺陷在晶格中的形态，帮助读者建立核心概念的视觉印象。图片将并列展示一个完美晶格和三种含有不同缺陷的晶格，形成清晰的对比。",
+        "prompt": "Create a clean, academic-style schematic diagram in four panels. Use a simple 2D square lattice of blue spheres to represent atoms. Panel 1 (top left) is labeled 'Perfect Crystal' and shows a perfect 4x4 grid of blue spheres. Panel 2 (top right) is labeled 'Vacancy' and shows the same grid with one blue sphere missing from the center. Panel 3 (bottom left) is labeled 'Interstitial Defect' and shows the grid with an extra, smaller red sphere squeezed between the central blue spheres. Panel 4 (bottom right) is labeled 'Substitutional Defect' and shows the grid with the central blue sphere replaced by a larger green sphere. The style should be minimalist, with clean lines, a light gray background, and clear, sans-serif labels. Use a scientific illustration aesthetic.",
+        "negative_prompt": "photorealistic, 3D rendering, complex shadows, dark background, handwritten text, cartoonish, blurry, cluttered, organic shapes."
+    },
+    {
+        "position": "这个强大的记法构成了**[缺陷化学](@entry_id:158602) (defect chemistry)** 的基础，它允许我们将缺陷的形成和相互作用写成类似于[化学反应](@entry_id:146973)的[平衡方程](@entry_id:172166)，并要求这些方程在质量、[晶格](@entry_id:196752)位置和有效电荷三方面都保持平衡。",
+        "reason": "Kröger-Vink记法是描述缺陷的标准化但抽象的语言。一张图表通过几个关键实例（如阳离子空位、阴离子空位、间隙离子）来图解其表示法 M_S^C 的构成，特别是有效电荷的计算，能够极大地降低理解门槛，使读者能快速掌握这一工具。",
+        "prompt": "Design an infographic-style table explaining Kröger-Vink Notation for an ionic crystal A+B-. The table should have four rows for four examples. Columns should be: 'Defect Type', 'Schematic', 'Notation (M_S^C)', and 'Effective Charge Calculation'. Example 1: 'Cation Vacancy', a 2D lattice with a missing A+ ion, Notation 'V_A′', Calculation '(0) - (+1) = -1'. Example 2: 'Anion Vacancy', a lattice with a missing B- ion, Notation 'V_B•', Calculation '(0) - (-1) = +1'. Example 3: 'Cation Interstitial', an A+ ion in an interstitial site, Notation 'A_i•', Calculation '(+1) - (0) = +1'. Example 4: 'Substitutional Defect', an M2+ ion on an A+ site, Notation 'M_A•', Calculation '(+2) - (+1) = +1'. Use simple icons for ions (e.g., blue circle for A+, orange for B-, green for M2+). The style must be clean, modern, and educational, with a color-coded scheme and clear typography against a white background. Academic, minimalist aesthetic.",
+        "negative_prompt": "cluttered, hand-drawn, 3D, photorealistic, dark, confusing layout, excessive text, blurry."
+    },
+    {
+        "position": "在离子晶体中，为了维持整体的[电中性](@entry_id:157680)，这些缺陷通常成对出现。两种最主要的内禀缺陷类型是肖特基无序和弗伦克尔无序 。",
+        "reason": "此处对比了两种最核心的内禀缺陷：肖特基缺陷和弗伦克尔缺陷。一张并列对比的示意图能清晰地揭示二者在形成机制（原子去向）、对晶格的影响（是否产生间隙）以及对密度的影响上的根本区别，是理解本章内容的关键。",
+        "prompt": "Create a two-panel, side-by-side comparison diagram with a minimalist, scientific style. Left panel labeled 'Schottky Defect'. It shows a 2D ionic crystal lattice (alternating small blue circles for cations and large red circles for anions). An arrow points from a cation inside the lattice to the crystal surface, and another arrow points from an anion inside to the surface. The lattice shows a resulting cation vacancy and an anion vacancy. Right panel labeled 'Frenkel Defect'. It shows a similar lattice, but an arrow points from a cation's lattice site to a nearby interstitial position. The lattice shows a resulting cation vacancy and an interstitial cation. Both panels should have clean lines, a neutral background, and simple, clear labels. The overall aesthetic is that of a modern textbook illustration.",
+        "negative_prompt": "photorealistic, complex textures, shadows, 3D effects, dark colors, cartoon style, messy annotations."
+    },
+    {
+        "position": "这些因素共同作用，显著降低了 $\\mathrm{Ag}^{+}$ [间隙缺陷](@entry_id:180338)的形成能，使其低于[肖特基缺陷](@entry_id:138313)的形成能，从而导致弗伦克尔无序在 $\\mathrm{AgCl}$ 中占主导地位。",
+        "reason": "该段落通过对比NaCl和AgCl解释了缺陷形成能的决定因素，这是一个相对复杂的概念。一张简化的能量图可以直观地展示这两种材料中，肖特基缺陷和弗伦克尔缺陷形成能的相对高低，从而一目了然地解释为何它们的主导缺陷类型不同。",
+        "prompt": "Generate a simple and clean bar chart diagram for an academic journal, comparing defect formation energies. The diagram has two main sections, labeled 'NaCl' and 'AgCl'. In the 'NaCl' section, there are two vertical bars on a common energy axis (Y-axis labeled 'Formation Energy'). The bar for 'Schottky Defect' is short (low energy), and the bar for 'Frenkel Defect' is tall (high energy). In the 'AgCl' section, the situation is reversed: the bar for 'Frenkel Defect' is short, and the bar for 'Schottky Defect' is tall. Use a simple color scheme (e.g., blue for Schottky, orange for Frenkel). The entire image should have a minimalist, vector graphic style with clear labels and a white background.",
+        "negative_prompt": "3D bars, gradients, shadows, dark background, decorative elements, photographs, hand-drawn elements."
+    },
+    {
+        "position": "在**高温区**，内禀缺陷的浓度最终会超过固定的外来缺陷浓度，成为主导。",
+        "reason": "这段文字描述了掺杂晶体中缺陷浓度随温度变化的两个区域：低温下的外来区和高温下的内禀区。这是一个经典的Arrhenius行为，用一张标准的对数浓度-倒数温度图（Arrhenius plot）来展示，可以非常清晰地将文字描述的抽象关系转化为具体的函数图像，并突出两个区域的特征（斜率不同）。",
+        "prompt": "Create a scientific graph (Arrhenius plot) with a clean, minimalist style. The X-axis is labeled '1/T' (inverse temperature), with temperature increasing from right to left. The Y-axis is labeled 'log(Defect Concentration)' on a logarithmic scale. Plot a single curve that shows two distinct linear regions. On the right (low temperature), the curve is nearly horizontal, this region is labeled 'Extrinsic Region (Doping Controlled)'. On the left (high temperature), the curve has a steep negative slope, this region is labeled 'Intrinsic Region (Thermally Activated)'. The transition between the two regions should be a smooth knee. The style should be typical of a scientific publication: black lines, clear axis labels, sans-serif font, and no grid lines or background color.",
+        "negative_prompt": "colorful, 3D plot, decorative, cartoonish, picture background, heavy grid lines, handwritten labels, shadows."
+    },
+    {
+        "position": "因此，从基本的几何和物理原理出发，我们可以得出结论：在许多[晶体结构](@entry_id:140373)中，$E_m^{\\text{interstitial}} \\gg E_m^{\\text{vacancy}}$。",
+        "reason": "此处对比了空位和间隙缺陷的迁移机制，并解释了为何它们的迁移焓差异巨大。通过图示迁移路径和相应的势垒，可以直观地展示间隙原子迁移时遇到的“拥挤”和空位迁移的“开阔”，从而让读者理解迁移焓差异的物理根源。",
+        "prompt": "Create a two-part schematic diagram illustrating defect migration mechanisms, in a clean, academic style. Part 1, labeled 'Vacancy Migration', shows a 2D lattice. An atom next to a vacancy is highlighted, with a curved arrow showing its path into the vacancy through a saddle point. Below this, a corresponding energy profile graph shows a low activation energy barrier, labeled 'E_m (vacancy)'. Part 2, labeled 'Interstitial Migration', shows a 2D lattice with an interstitial atom. An arrow shows its path squeezing between two lattice atoms (the saddle point) to a new interstitial site. The corresponding energy profile graph below shows a much higher activation energy barrier, labeled 'E_m (interstitial)'. The entire diagram should use simple shapes, a limited color palette (e.g., blue for lattice atoms, red for migrating/interstitial atoms), and clear labels. The style should be minimalist vector art.",
+        "negative_prompt": "photorealistic, 3D rendering, complex backgrounds, shadows, gradients, hand-drawn, cluttered."
+    },
+    {
+        "position": "通过求解这些耦合的[速率方程](@entry_id:198152)，可以得到在持续辐照下的[稳态](@entry_id:182458)缺陷浓度。",
+        "reason": "辐照损伤下的缺陷演化是一个动态平衡过程，涉及产生、复合和吸收。一张流程图或示意图可以清晰地展示这个动力学模型：高能粒子轰击晶格产生弗伦克尔对（产生项），空位和间隙随后可以相互湮灭（复合项），或者被位错、晶界等“汇”吸收（吸收项）。这有助于将复杂的速率方程转化为易于理解的物理过程。",
+        "prompt": "Create a conceptual schematic diagram illustrating the kinetics of defect evolution under irradiation. In the center, show a 2D crystal lattice. An incoming wavy arrow labeled 'Irradiation (G)' strikes a lattice atom, creating a vacancy-interstitial pair (Frenkel pair). From this pair, draw two opposing arrows leading to a 'Recombination' event where they annihilate. Also, draw arrows from the vacancy and the interstitial leading to schematic 'sinks' on the edge of the diagram, depicted as a dislocation symbol and a grain boundary line, labeled 'Absorption at Sinks (k_v, k_i)'. The diagram should visually represent a dynamic steady-state balance. Use a clean, modern, infographic style with simple icons and clear labels. Tech-inspired blue and gray color palette on a white background.",
+        "negative_prompt": "realistic, complex, dark, messy, hand-drawn, cartoon, photograph, 3D."
+    }
+]

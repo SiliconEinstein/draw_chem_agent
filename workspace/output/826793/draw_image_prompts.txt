@@ -1,0 +1,50 @@
+[
+    {
+        "position": "虽然这会增加费米能级附近的态密度，从而增强材料的金属性和导电性，但它也偏离了仅填充成键态的最优稳定构型  。",
+        "reason": "该段落通过价电子浓度（VEC）解释了TiC (VEC=8) 和 TiN (VEC=9) 的稳定性与金属性差异。一张对比图可以直观展示VEC=8时电子恰好填满成键态（最稳定），而VEC=9时多余电子进入非键/反键态（降低稳定性但增强金属性）的电子结构模型，清晰阐释核心概念。",
+        "prompt": "A minimalist scientific diagram comparing the electronic density of states (DOS) for two materials based on Valence Electron Concentration (VEC). Use a two-panel layout. Left panel titled 'VEC = 8 (e.g., TiC)', showing a DOS plot where the bonding states are completely filled and the Fermi level (labeled E_F) is at a minimum (pseudogap). Right panel titled 'VEC = 9 (e.g., TiN)', showing the same basic DOS shape, but the Fermi level (E_F) is shifted up into a non-bonding/antibonding d-band peak. Use a clean, academic style with a white background, black lines for the DOS curves, and a light blue transparent fill for the occupied states. The Fermi level should be a dashed red line.",
+        "negative_prompt": "3D render, photorealistic, cluttered, dark background, text other than labels, watermark, signature, blurry, cartoonish."
+    },
+    {
+        "position": "最后，WC型结构，以碳化钨（WC）为原型，是一种简单六方结构，其特殊之处在于所有原子都处于6:6的三棱柱配位环境中，这与NaCl型结构的八面体配位截然不同 。",
+        "reason": "此段落描述了四种典型的晶体结构（NaCl、闪锌矿、AlB₂、WC），这些是理解难熔陶瓷性质的基础。一张包含这四种结构原子排列方式的示意图，能将抽象的文字描述转化为直观的视觉信息，极大地帮助读者理解和记忆。",
+        "prompt": "A 4-panel grid scientific illustration showcasing four typical crystal structures of refractory ceramics. Each panel should have a clear title: 1. 'NaCl (岩盐) type', 2. 'Zinc Blende (闪锌矿) type', 3. 'AlB₂ type', 4. 'WC type'. Use two different colored spheres for the different atoms (e.g., large grey for metal, small blue for non-metal). Show the unit cell and the coordination polyhedra (e.g., octahedron for NaCl, trigonal prism for WC). Maintain a consistent, clean, academic diagram style with a white background and clear labels.",
+        "negative_prompt": "photorealistic, complex shading, dark background, handwritten text, watermark, signature, blurry, disconnected atoms."
+    },
+    {
+        "position": "这就是它们表现出金属性的根本原因 。",
+        "reason": "该部分对比了解释了为何c-BN是半导体而TiC是金属，核心在于是否有利能重叠填补了能隙。一张并列对比的能带结构（或态密度）示意图，可以清晰地展示半导体的“价带-能隙-导带”结构与金属的“能带重叠，费米能级穿过能带”结构，使复杂的电子结构理论一目了然。",
+        "prompt": "A side-by-side comparison diagram of the electronic density of states (DOS) for a semiconductor and a metal. Left panel titled 'Semiconductor (e.g., c-BN)', showing a filled valence band, a distinct band gap (labeled '能隙'), and an empty conduction band, with the Fermi level (E_F) inside the gap. Right panel titled 'Metal (e.g., TiC)', showing overlapping bands (labeled 'p-d bonding' and 'd-d metallic') with no gap, and the Fermi level (E_F) crossing a band, resulting in a non-zero DOS at E_F. Use a minimalist, academic style, white background, blue shading for occupied states, and a red dashed line for the Fermi level.",
+        "negative_prompt": "3D, photorealistic, artistic, cluttered, dark background, watermark, noisy, text-heavy."
+    },
+    {
+        "position": "由于皮尔斯应力τ_P与γ_us正相关，且与位错核宽度（与1/γ_us成正比）成指数负相关，c-BN中巨大的γ_us导致了其极窄的位错核和极高的皮尔斯应力，使其力学行为远比TiN更接近理想的脆性材料 。",
+        "reason": "文中通过对比c-BN和TiN的非稳堆垛层错能（γ_us）来解释其皮尔斯应力的差异，这是一个相对抽象的力学概念。一张图表，同时绘制出c-BN（高峰值）和TiN（低峰值）的广义堆垛层错能（GSF）曲线，可以直观地展示γ_us的差异，并关联到材料的塑性/脆性行为。",
+        "prompt": "A scientific graph illustrating the Generalized Stacking Fault (GSF) energy for two different materials. The x-axis is labeled 'Slip Displacement' and the y-axis is 'Energy (γ)'. Plot two curves on the same axes. One curve, labeled 'c-BN (高共价性)', should have a very high and sharp peak, with the peak value labeled 'γ_us'. The second curve, labeled 'TiN (混合键合)', should have a much lower and broader peak. Add an annotation: 'High γ_us → High Peierls Stress → Brittle'. Use a clean, 2D plot style with a white background, distinct line colors (e.g., blue for c-BN, orange for TiN), and clear axis labels.",
+        "negative_prompt": "3D plot, bar chart, pie chart, photorealistic, dark background, watermark, messy labels, grid lines too thick."
+    },
+    {
+        "position": "各相的相对量（摩尔分数）可以通过杠杆定律（lever rule）精确计算 。",
+        "reason": "凸包（convex hull）构造是判断非化学计量化合物相稳定性的核心热力学方法。这是一个纯粹的图解方法，没有配图读者很难理解其原理。一张标准的吉布斯自由能-组分图，清晰地标出凸包、连接线以及稳定相和亚稳相，是解释这一概念不可或缺的。",
+        "prompt": "A schematic diagram explaining the convex hull construction for thermodynamic phase stability. The x-axis should be 'Composition, x (in M_xN_{1-x})' and the y-axis should be 'Gibbs Free Energy, G'. Plot several points representing different compositions. Draw a solid line to form the lower convex hull connecting the stable phases. Label the points on the hull as 'Stable Phases'. Show a point above the hull labeled 'Unstable Phase (decomposes)'. Draw a dashed 'tie-line' connecting two stable phases, and show how the unstable phase projects onto this line. Use a clean, academic textbook style with a white background and clear annotations.",
+        "negative_prompt": "3D, photorealistic, hand-drawn, dark background, watermark, excessive text, vibrant colors."
+    },
+    {
+        "position": "理解这种复杂的、动态的氧化行为，对于设计和应用下一代超高温材料至关重要 。",
+        "reason": "文章通过对比碳化物和硼化物的氧化行为，阐述了UHTC的抗氧化机理。一个关键的区别是碳化物生成多孔氧化层，而硼化物生成“自愈合”的玻璃层。一张并排的截面示意图，可以生动地展示这两种截然不同的氧化层结构，从而突出硼化物作为UHTC的优势。",
+        "prompt": "A two-panel infographic comparing the high-temperature oxidation mechanisms of carbides and borides. Both panels should show a cross-section of a material being oxidized from the top. Left panel titled 'Carbide Oxidation (e.g., HfC)', showing the substrate material below a porous, cracked oxide layer, with arrows indicating gas (CO₂) escaping through the cracks. Right panel titled 'Boride Oxidation (e.g., ZrB₂)', showing the substrate below a composite oxide layer consisting of a solid oxide skeleton (e.g., ZrO₂) with a liquid glass phase (e.g., B₂O₃) filling the pores and cracks, labeled 'Self-healing layer'. Use a clear, schematic style with minimalist icons and labels. Tech-inspired color palette (blues, greys, and an orange/red accent for heat/liquid).",
+        "negative_prompt": "photorealistic, 3D render, complex textures, dark, blurry, watermark, hand-drawn."
+    },
+    {
+        "position": "这个过程本身消耗能量，并且微裂纹区的体积膨胀会对主裂纹尖端产生压应力，起到屏蔽作用 。",
+        "reason": "该段落列举了四种关键的陶瓷外在韧化机制（裂纹桥联、相拔出、裂纹偏转、微裂纹）。这些机制都是关于裂纹与微观结构相互作用的几何过程，通过一幅集成的示意图来展示它们如何“阻碍”裂纹扩展，是材料科学教学中的经典做法，效率远高于纯文字描述。",
+        "prompt": "A comprehensive scientific illustration showing extrinsic toughening mechanisms in ceramics. The diagram should feature a main crack propagating from left to right. In the wake of the crack tip, clearly illustrate and label the four mechanisms: 1. 'Crack Bridging' (a particle connecting the two crack faces), 2. 'Fiber Pull-out' (a fiber being pulled from the matrix), 3. 'Crack Deflection' (the crack path bending around a particle), and 4. 'Microcrack Toughening' (a cloud of smaller cracks near the main crack tip). Use a clean, 2D schematic style with a white background, a grey matrix, and distinct colors for reinforcing phases/fibers. Arrows should indicate the direction of crack propagation and the resistive forces.",
+        "negative_prompt": "photorealistic, 3D, dark, messy, watermark, signature, cartoon, abstract art."
+    },
+    {
+        "position": "这种通过能带共振来大幅提升甚至改变S符号的策略，是当前高性能热电材料研究中的一个前沿方向 。",
+        "reason": "此段解释了通过在能带中引入“共振态”来调控塞贝克系数这一前沿概念。这是一个非常抽象的电子结构工程思想。一张态密度图，清晰地展示一个尖锐的共振峰如何剧烈地改变费米能级附近态密度的能量导数，并进而影响塞贝克系数，可以将这一高阶物理概念可视化，便于理解。",
+        "prompt": "A scientific diagram illustrating the concept of a 'resonant state' for enhancing thermoelectric properties. The diagram should be a plot of Density of States (DOS) vs. Energy (E). Show a broad parabolic band (e.g., valence band) with a very sharp, narrow peak embedded within it, labeled 'Resonant State'. Below the DOS plot, show a corresponding plot of the Seebeck coefficient (S) vs. Energy. The Seebeck plot should show a significant enhancement or even a sign change in 'S' in the energy range corresponding to the resonant state. Use a clean, academic style, white background, and annotations to link the peak in DOS to the feature in the Seebeck coefficient. Use blue for the DOS and red for the Seebeck coefficient curve.",
+        "negative_prompt": "3D render, photorealistic, cluttered, dark background, pie chart, watermark, blurry."
+    }
+]

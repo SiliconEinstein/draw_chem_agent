@@ -1,0 +1,50 @@
+[
+    {
+        "position": "晶体结构 = 布拉维格子 + 基元",
+        "reason": "该位置明确提出了“晶体结构 = 布拉维格子 + 基元”这一核心公式，并紧接着用FCC晶格上放置不同基元（单原子Cu vs. 双原子C）形成截然不同材料（金属 vs. 绝缘体）的例子来阐述。一张图可以直观地展示这个“构造”过程，将抽象的数学格点、原子基元和最终的物理结构三者联系起来，极大地增强了读者对这一基本概念的理解。",
+        "prompt": "A minimalist, three-panel infographic illustrating the concept 'Crystal Structure = Bravais Lattice + Basis'. Style: clean vector art, academic diagram, tech-inspired blue and gray color palette. Panel 1 (left): Labeled 'Bravais Lattice', showing a 2D array of abstract points. Panel 2 (center): Labeled 'Basis', showing two different simple atom clusters, e.g., a single blue sphere and a pair of gray spheres. Panel 3 (right): Labeled 'Crystal Structure', showing the result of placing the basis onto the lattice points, creating two distinct periodic structures. Use arrows to show the combination: 'Lattice' + 'Basis' -> 'Structure'. White background, high contrast.",
+        "negative_prompt": "photorealistic, 3D rendering, complex textures, shadows, gradients, handwriting, clutter, people, organic shapes."
+    },
+    {
+        "position": "非晶态固体衍射图谱中尖锐布拉格峰的缺席，是其长程无序的决定性证据 。",
+        "reason": "这段文字总结了通过实空间（对分布函数 g(r)）和倒易空间（结构因子 S(q)）区分晶体和非晶体的方法。一张包含四格图表的图像可以并排对比这两种物质在两种空间中的特征信号，将抽象的函数描述（狄拉克δ函数峰 vs. 展宽的峰）转化为直观的图谱，是该章节核心论证的完美视觉总结。",
+        "prompt": "A 2x2 grid scientific chart comparing Crystalline and Amorphous solids. Style: academic journal figure, minimalist, clean lines, vector graphics. Top-left panel: Titled 'Crystal: Real Space', shows a plot of g(r) vs. r with sharp, discrete peaks extending to large r. Top-right panel: Titled 'Amorphous: Real Space', shows a plot of g(r) vs. r with a few broad, decaying peaks that approach 1. Bottom-left panel: Titled 'Crystal: Reciprocal Space', shows a plot of S(q) vs. q with sharp, delta-function-like Bragg peaks. Bottom-right panel: Titled 'Amorphous: Reciprocal Space', shows a plot of S(q) vs. q with broad, diffuse halos. Use a consistent color scheme (e.g., blue for crystal, orange for amorphous). Axes clearly labeled. White background.",
+        "negative_prompt": "3D plots, photos, hand-drawn, messy labels, shadows, vibrant neon colors, unnecessary decorations."
+    },
+    {
+        "position": "其结果是在一个临界半径 (critical radius) $r^* = \\frac{2\\gamma}{\\Delta g_v}$ 处出现一个极大值，即成核势垒 (nucleation barrier) $\\Delta G^* = \\frac{16\\pi\\gamma^3}{3(\\Delta g_v)^2}$。",
+        "reason": "此处详细解释了经典成核理论，描述了体自由能和表面自由能的竞争如何产生一个成核能垒。这是一个非常经典的物理化学概念，通常用一张ΔG(r)对r的函数图来表示。绘图可以直观地展示能垒的形成、临界半径r*和成核势垒ΔG*的位置，帮助读者理解为何结晶需要克服一个动力学障碍。",
+        "prompt": "A scientific graph illustrating Classical Nucleation Theory. Style: clean, academic diagram, minimalist. The x-axis is labeled 'Nucleus Radius (r)' and the y-axis is labeled 'Gibbs Free Energy Change (ΔG)'. Plot three curves: 1) a blue curve showing the positive surface energy term (∝ r^2); 2) a red curve showing the negative bulk energy term (∝ -r^3); 3) a solid black curve representing the total energy ΔG(r), which is the sum of the first two, showing an initial rise to a peak and then a decrease. The peak of the black curve should be labeled 'Nucleation Barrier (ΔG*)' and its position on the x-axis labeled 'Critical Radius (r*)'. White background, clear labels.",
+        "negative_prompt": "cluttered, hand-drawn, photorealistic, 3D, complex color gradients, background image, excessive text."
+    },
+    {
+        "position": "因此，$T_g$ 的值依赖于冷却速率：冷却速率越快，留给体系弛豫的时间越短，冻结就会发生在越高的温度。",
+        "reason": "这段话描述了玻璃化转变的动力学本质，即其转变温度Tg依赖于冷却速率。一张焓（或比容）-温度图是解释这一现象的标准教科书级插图。通过绘制不同冷却速率下的路径，可以清晰地展示平衡液态、过冷液态、玻璃态和晶态之间的关系，并直观定义熔点Tm和玻璃化转变温度Tg。",
+        "prompt": "A schematic plot illustrating the glass transition. Style: academic textbook diagram, clear vector lines. Y-axis labeled 'Enthalpy (H)' or 'Volume (V)', X-axis labeled 'Temperature (T)'. Show five distinct paths: 1) A line for the 'Crystalline Solid' with a steep jump up at 'Melting Point (Tm)'. 2) A line for the 'Equilibrium Liquid' extending from high T down to low T. 3) A 'Fast Cooling' curve branching off the liquid line at a high temperature, labeled 'Tg (fast)'. 4) A 'Slow Cooling' curve branching off the liquid line at a lower temperature, labeled 'Tg (slow)'. The region below these curves is the 'Glass' state. The region between the liquid line and the glass/crystal lines is the 'Supercooled Liquid' region. Use distinct colors for each state/path. White background.",
+        "negative_prompt": "realistic, 3D, shadows, photos, artistic style, dark background, complex patterns."
+    },
+    {
+        "position": "如果费米能级落入定域态区域（即 $k_F\\ell \\lesssim 1$），则材料在低温下表现为绝缘体 。",
+        "reason": "这里对比了晶体和非晶体中的电子结构，引入了布洛赫波、能带和安德森定域、迁移率边的概念。一张并排比较两者电子态密度（DOS）的图会非常有效。左边显示晶体清晰的能带和带隙，右边显示非晶体模糊的带边（带尾态）、迁移率边和局域态，可以直观地解释为何它们的导电性有天壤之别。",
+        "prompt": "A side-by-side comparison diagram of the electronic density of states (DOS) for a crystal and an amorphous solid. Style: minimalist, scientific illustration, tech-inspired. Left panel titled 'Crystal': shows a DOS plot with sharp, well-defined valence and conduction bands separated by a clean 'Band Gap'. Right panel titled 'Amorphous Solid': shows a DOS plot where the bands have 'Band Tails' (shaded regions) extending into the gap. Mark the 'Mobility Edge (Ec)' within the bands, separating 'Extended States' (inside the bands) from 'Localized States' (in the tails). The Fermi Level (Ef) can be shown in the localized states region. Use simple color coding for different regions. White background.",
+        "negative_prompt": "photorealistic, 3D, detailed atomic models, shadows, gradients, clutter."
+    },
+    {
+        "position": "通过分析峰的强度和面积，还可以得到配位数等信息。值得注意的是，由于原子间距是材料的内禀属性，这些峰位不依赖于所用的探针（X射线或中子），但其相对强度则因探针与不同原子核或电子云的相互作用差异而有所不同。PDF分析是连接非晶材料宏观性质与其微观无序结构的关键桥梁。",
+        "reason": "此处介绍了如何用对分布函数（PDF）分析非晶二氧化硅的结构。一张图可以结合原子结构模型和对应的G(r)函数图，直观地将G(r)上的峰与具体的原子对（如Si-O, O-O, Si-Si）距离对应起来，生动地展示PDF分析如何从衍射数据中“解码”出短程有序的几何信息。",
+        "prompt": "An infographic explaining Pair Distribution Function (PDF) analysis of amorphous silica (a-SiO2). Style: educational diagram, clean vector art. On the left, a 2D schematic of the random network of SiO4 tetrahedra, with Si atoms (e.g., blue) and O atoms (e.g., red). Highlight and label three specific atom pairs with their distances: a Si-O pair, an O-O pair within a tetrahedron, and a Si-Si pair between two tetrahedra. On the right, a plot of the reduced pair distribution function G(r) vs. distance r. The plot should have three distinct peaks. Use arrows to connect the first peak on the plot to the Si-O distance in the schematic, the second peak to the O-O distance, and the third peak to the Si-Si distance. Axes and peaks clearly labeled. White background.",
+        "negative_prompt": "3D render, photorealistic, complex background, shadows, blurry lines, handwriting."
+    },
+    {
+        "position": "因此，引入纳米尺度的无序或制造非晶态材料，可以在不过分牺牲电导率的情况下，显著降低晶格热导率，从而提升热电性能。",
+        "reason": "该段落介绍了“声子玻璃-电子晶体”（PGEC）这一巧妙的设计理念。这个概念本身非常形象，适合用一张示意图来表达。图中可以描绘电子和声子在同一种特殊结构材料中的不同输运行为：电子畅通无阻，而声子被强烈散射，从而直观地传达PGEC的核心思想。",
+        "prompt": "A conceptual diagram of the 'Phonon-Glass Electron-Crystal' (PGEC) concept. Style: schematic, infographic, futuristic tech aesthetic. Show a cross-section of a material block. Inside the block, there's an ordered crystalline matrix with some embedded disordered nanostructures (or amorphous regions). Draw straight, solid arrows representing 'Electrons' moving easily through the matrix, labeled 'High Electrical Conductivity (Electron Crystal)'. Draw wavy, chaotic arrows representing 'Phonons' that are being scattered by the disordered regions, labeled 'Low Thermal Conductivity (Phonon Glass)'. Use contrasting colors, like cool blue for electrons and warm red for scattered phonons. Minimalist icons and clean labels.",
+        "negative_prompt": "realistic atoms, 3D rendering, photography, cluttered, dark, organic textures."
+    },
+    {
+        "position": "临界冷却速率（$R_c$）是指恰好与TTT曲线鼻子相切的冷却速率。通过Scheil加和定则等模型，可以利用TTT图数据估算出连续冷却条件下的临界冷却速率。这一原理指导着材料科学家通过调整合金成分来减缓结晶动力学（即将TTT曲线向右推），从而降低所需的临界冷却速率，实现更大尺寸非晶部件的制备。",
+        "reason": "本段详细说明了利用时间-温度-相变（TTT）图来指导非晶合金制备的原理，核心是“临界冷却速率”。一张标准的TTT图，并在其上叠加不同的冷却曲线，是解释这个过程的最直观、最标准的方法。它可以清晰地展示快冷如何“绕过”结晶区形成玻璃，而慢冷则会发生结晶。",
+        "prompt": "A Time-Temperature-Transformation (TTT) diagram for glass formation. Style: classic scientific graph, clean vector lines. Y-axis is 'Temperature', X-axis is 'log(Time)'. Draw a C-shaped curve labeled 'Crystallization Zone'. Draw three cooling curves starting from a high temperature ('Liquid' region): 1) A 'Slow Cooling' curve that passes through the C-curve, with an arrow pointing to a final state labeled 'Crystal'. 2) A 'Fast Cooling' curve that completely avoids the C-curve, ending in a state labeled 'Glass'. 3) A dashed line representing the 'Critical Cooling Rate (Rc)', which is tangent to the 'nose' of the C-curve. Clearly label all regions and curves. White background, simple color scheme.",
+        "negative_prompt": "3D plot, hand-drawn, photorealistic, complex background, shadows, artistic effects."
+    }
+]
