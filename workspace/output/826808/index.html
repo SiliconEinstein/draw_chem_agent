@@ -55,7 +55,6 @@ $$</p>
 2.  固-液界面张力 $\gamma_{sl}$，沿固-液界面方向拉动接触线，使其倾向于收缩。
 3.  液-气<a href="@entry_id:271901">界面张力</a> $\gamma_{lv}$，沿液-气界面<a href="@entry_id:268870">切线</a>方向作用。其在固体表面上的水平分量为 $\gamma_{lv}\cos\theta$，方向与 $\gamma_{sl}$ 相同，共同抵抗铺展。</p>
 <p>在力学平衡时，这些沿固体表面方向的力必须相互抵消，这便得到了著名的<strong><a href="@entry_id:149262">杨氏方程</a> (Young's equation)</strong> ：</p>
-<p><img alt="826808_1.png" src="826808_1.png" /></p>
 <p>$$
 \gamma_{sv} = \gamma_{sl} + \gamma_{lv}\cos\theta
 $$</p>
@@ -86,7 +85,6 @@ $$</p>
 <p><a href="@entry_id:149262">杨氏方程</a>所描述的理想世界在现实中很少存在。真实的固体表面往往是粗糙的、化学非均相的，甚至是可变形的。这些非理想因素导致了与理想模型显著偏离的复杂行为。</p>
 <h4><a href="@entry_id:171005">表面粗糙度</a></h4>
 <p><a href="@entry_id:171005">表面粗糙度</a>破坏了<a href="@entry_id:149262">杨氏方程</a>中“光滑”的假设。其影响主要通过两种模型来描述 ：</p>
-<p><img alt="826808_2.png" src="826808_2.png" /></p>
 <ul>
 <li>
 <p><strong><a href="@entry_id:186521">文策尔模型</a> (Wenzel model)</strong>：该模型假设液体完全填充了表面的沟壑，没有截留气体。粗糙度使得真实的固-液接触面积大于其投影面积。定义粗糙度因子 $r$ 为真实面积与投影面积之比（$r &gt; 1$），通过最小化总能量可以得到文策尔方程：$\cos\theta_W = r\cos\theta_Y$。其中 $\theta_Y$ 是理想平整表面上的杨氏<a href="@entry_id:145614">接触角</a>，$\theta_W$ 是粗糙表面上的表观<a href="@entry_id:145614">接触角</a>。此方程预言，粗糙度会放大材料固有的<a href="@entry_id:190960">润湿性</a>：亲水表面（$\theta_Y  90^\circ$）会变得更加亲水（$\theta_W  \theta_Y$），而<a href="@entry_id:148780">疏水表面</a>（$\theta_Y &gt; 90^\circ$）会变得更加疏水（$\theta_W &gt; \theta_Y$）。</p>
@@ -101,10 +99,8 @@ $$</p>
 *   <strong>前进角 ($\theta_A$)</strong>：当液滴体积增加或被推动时，接触线即将向前铺展到未<a href="@entry_id:147044">润湿</a>区域时测得的最大稳定<a href="@entry_id:145614">接触角</a>。
 *   <strong>后退角 ($\theta_R$)</strong>：当液滴体积减少或被<a href="@entry_id:160816">拉回</a>时，接触线即将从已润湿区域收缩时测得的最小稳定接触角。</p>
 <p>在任何有滞后效应的真实表面上，总有 $\theta_A &gt; \theta_R$ 。<a href="@entry_id:149262">杨氏方程</a>描述的理想<a href="@entry_id:141660">热力学平衡</a>角 $\theta_Y$ 位于这个区间之内。<a href="@entry_id:148697">接触角滞后</a> $\Delta\theta = \theta_A - \theta_R$ 是衡量<a href="@entry_id:203559">表面缺陷</a>和接触线钉扎程度的重要指标。例如，在倾斜板实验中，一个液滴开始滑动的<a href="@entry_id:201918">临界条件</a>是重力的下滑分力 $mg\sin\alpha$ 恰好克服了由<a href="@entry_id:148697">接触角滞后</a>产生的最大毛细滞留力 $F_{cap} = w \gamma_{lv}(\cos\theta_R - \cos\theta_A)$，其中 $w$ 是液滴的宽度 。</p>
-<p><img alt="826808_3.png" src="826808_3.png" /></p>
 <h4>可变形与受力固体</h4>
 <p><a href="@entry_id:149262">杨氏方程</a>假设固体是刚性的。然而，对于软材料（如凝胶、弹性体），这个假设不再成立。液-气<a href="@entry_id:271901">界面张力</a>的垂直分量 $\gamma_{lv}\sin\theta$ 会对柔软的固体施加一个向上的力，导致在三相接触线处形成一个微小的<strong>润湿脊 (wetting ridge)</strong> 。这种固体的变形必须在力学平衡中予以考虑，这属于<strong><a href="@entry_id:190262">弹性毛细现象</a> (elastocapillarity)</strong> 的范畴。</p>
-<p><img alt="826808_4.png" src="826808_4.png" /></p>
 <p>更进一步，固体的<a href="@entry_id:750731">界面力学</a>比液体要复杂。对于固体，<strong>表面应力 (surface stress)</strong> 张量 $\Upsilon_{ij}$ 与单位面积的<strong><a href="@entry_id:159200">表面自由能</a> (surface free energy)</strong> $\gamma$ 不再是同一个量。<a href="@entry_id:159200">表面自由能</a> $\gamma$ 是创造新表面积所需的功，而<a href="@entry_id:191241">表面应力</a> $\Upsilon_{ij}$ 是弹性地拉伸一个已存在表面所需的力。两者通过<strong>夏特沃斯关系 (Shuttleworth relation)</strong> 联系起来 ：</p>
 <p>$$
 \Upsilon_{ij} = \gamma\delta_{ij} + \frac{\partial\gamma}{\partial\epsilon_{ij}}

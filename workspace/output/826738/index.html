@@ -22,15 +22,17 @@
 <p>最简单的结构是<strong><a href="@entry_id:161615">线性聚合物</a> (linear polymer)</strong>。在<a href="@entry_id:140799">图论</a>模型中，单个线性<a href="@entry_id:150543">高分子</a>链对应一个<strong>路径图 (path graph)</strong>。这是一个无环的连通图（即一棵树），其特征是：恰好有两个<a href="@entry_id:264944">顶点的度</a>为1，它们是<strong>链端 (chain ends)</strong>；所有内部<a href="@entry_id:264944">顶点的度</a>均为2。</p>
 <p>当聚合物链的两个末端通过<a href="@entry_id:141465">共价键</a>连接时，便形成了<strong>环状（或称环形）聚合物 (ring/cyclic polymer)</strong>。其拓扑结构是一个<strong>环图 (cycle graph)</strong>，其中每个顶点的度都为2。从拓扑学上讲，它的<strong>圈数 (cyclomatic number)</strong> 为1，切断其中任意一条边都会使其转变为一条线性链 。</p>
 <p>当结构中出现度大于2的顶点时，我们就进入了非<a href="@entry_id:161615">线性聚合物</a>的领域。这些 $k(v) \ge 3$ 的顶点被称为<strong>支化点 (branching points)</strong>。最普遍的<a href="@entry_id:637147">非线性</a>结构是<strong>支化聚合物 (branched polymer)</strong>。在<a href="@entry_id:160769">凝胶化</a>（见下文）之前，这些分子对应于图论中的<strong>树 (tree)</strong>——即无环的连通图。尽管它们可能具有很高的分子量和复杂的分支，但每个分子（即每个<a href="@entry_id:264785">连通图</a>）的大小都是有限的。</p>
+<p><img alt="826738_0.png" src="826738_0.png" /></p>
 <p>在支化聚合物中，几类具有高度规整性的结构尤为重要：
 - <strong>星形聚合物 (star polymer)</strong>：它是一棵具有单一中心核的树。这个核是一个度 $k(v_0) = f_s \ge 3$ 的顶点，其中 $f_s$ 被称为核的<strong>官能度 (functionality)</strong>。从该核上伸展出 $f_s$ 条线性臂 。
 - <strong>树枝状大分子 (dendrimer)</strong>：这是一种通过逐代增长合成的、结构完美、单分散的树状大分子。理想的树枝状<a href="@entry_id:150543">大分子</a>没有环，其内部支化点的官能度在每一代都是精确固定的。其末端基团的数量随代数 $G$ 的增长呈指数级增加，例如，对于一个官能度为 $f_c$ 的核和支化官能度为 $f_b$ 的<a href="@entry_id:136559">单体</a>，第 $G$ 代的末端基<a href="@entry_id:272714">团数</a>量为 $N_{term} = f_c (f_b-1)^G$ 。
 - <strong>超支化聚合物 (hyperbranched polymer)</strong>：与树枝状<a href="@entry_id:150543">大分子</a>不同，超支化聚合物通常通过一锅法统计聚合（例如 $AB_2$ 型<a href="@entry_id:136559">单体</a>）制备。这导致其支化不完美，结构不规整，分子量呈<a href="@entry_id:163107">多分散性</a>（$PDI = M_w/M_n &gt; 1$）。其<strong><a href="@entry_id:200942">支化度</a> (degree of branching, DB)</strong> 通常远低于理想树枝状<a href="@entry_id:150543">大分子</a>的 $DB=1$，理论上趋近于0.5 。</p>
+<p><img alt="826738_1.png" src="826738_1.png" /></p>
 <p>其他重要的<a href="@entry_id:637147">非线性</a>结构还包括：
 - <strong><a href="@entry_id:158927">接枝共聚物</a> (graft copolymer)</strong>：它由一条线性的<strong><a href="@entry_id:183224">主链</a> (backbone)</strong> 和一些共价连接在主链上的<strong><a href="@entry_id:182203">侧链</a> (side chains)</strong> 组成。主链上连接<a href="@entry_id:182203">侧链</a>的那些<a href="@entry_id:264944">顶点的度</a> $k(v) \ge 3$。
 - <strong>刷状聚合物 (bottlebrush polymer)</strong>：这是<a href="@entry_id:158927">接枝共聚物</a>的一个极限情况，即接枝密度非常高，几乎每个主链单元都连接着一条<a href="@entry_id:182203">侧链</a>。此时，大部分主链<a href="@entry_id:264944">顶点的度</a> $k(v) \ge 3$ 。</p>
 <p>最后，当支化点之间的连接不再局限于单个分子内部，而是贯穿整个宏观体系时，就形成了<strong>网络聚合物 (network polymer)</strong>，或称<strong>凝胶 (gel)</strong>。其拓扑学标志是在<a href="@entry_id:143061">热力学极限</a>下，出现了一个<strong>贯穿系统 (system-spanning)</strong> 的连通组分，即<strong>逾渗簇 (percolating component)</strong>。这个宏观尺度的分子包含了大量的支化点和环，其环的数量与体系的大小成正比。这与由有限尺寸的支化分子组成的“溶胶 (sol)”相区别 。</p>
-<p><img alt="826738_0.png" src="826738_0.png" /></p>
+<p><img alt="826738_2.png" src="826738_2.png" /></p>
 <h3>合成机制对<a href="@entry_id:161007">高分子结构</a>的控制</h3>
 <p><a href="@entry_id:161007">高分子结构</a>的形成由其合成机制从根本上决定。两种最主要的聚合机制是<strong><a href="@entry_id:138896">逐步聚合</a> (step-growth polymerization)</strong> 和<strong>链式聚合 (chain-growth polymerization)</strong> 。</p>
 <p>在<strong><a href="@entry_id:138896">逐步聚合</a></strong>中，体系中任何两个具有互补<a href="@entry_id:139479">官能团</a>的分子（无论是<a href="@entry_id:136559">单体</a>、二聚体还是更大的低聚物）都可以随时反应。分子量在整个反应过程中缓慢增长，只有在反应程度 $p$ 极高时（$p \to 1$）才能获得高分子量。这种机制下的结构控制主要依赖于<a href="@entry_id:136559">单体</a>的<strong>官能度 (functionality)</strong> $f$。
@@ -44,13 +46,14 @@
 - <strong>交替<a href="@entry_id:157928">共聚物</a> (alternating copolymer)</strong>：两种<a href="@entry_id:136559">单体</a>严格交替<a href="@entry_id:136432">排列</a>，如 A-B-A-B-...。
 - <strong>嵌段共聚物 (block copolymer)</strong>：由两种或多种长的、均一的<a href="@entry_id:136559">单体</a>序列（“嵌段”）共价连接而成，如 A-A-...-A-B-B-...-B。
 - <strong>梯度<a href="@entry_id:157928">共聚物</a> (gradient copolymer)</strong>：其化学组成沿链长平滑地、单调地变化 。</p>
-<p><img alt="826738_1.png" src="826738_1.png" /></p>
+<p><img alt="826738_3.png" src="826738_3.png" /></p>
 <p><a href="@entry_id:157928">共聚物</a>的序列主要由共聚<a href="@entry_id:150220">反应动力学</a>决定。在基于末端模型的<a href="@entry_id:164363">自由基</a><a href="@entry_id:194627">共聚</a>中，<strong><a href="@entry_id:181212">竞聚率</a> (reactivity ratios)</strong> $r_1 = k_{11}/k_{12}$ 和 $r_2 = k_{22}/k_{21}$ 描述了增长的<a href="@entry_id:164363">自由基</a>链末端（$M_1^\bullet$ 或 $M_2^\bullet$）优先与同种<a href="@entry_id:136559">单体</a>（$M_1$ 或 $M_2$）反应还是与异种<a href="@entry_id:136559">单体</a>反应的倾<a href="@entry_id:144651">向性</a> 。
 - 当 $r_1 \approx r_2 \approx 1$ 时，链末端对两种<a href="@entry_id:136559">单体</a>没有选择性，倾向于形成<a href="@entry_id:158266">无规共聚物</a>。
 - 当 $r_1  1$ 且 $r_2  1$ 时，两种链末端都倾向于与异种<a href="@entry_id:136559">单体</a>反应，从而形成交替序列。
 - 当 $r_1 &gt; 1$ 且 $r_2 &gt; 1$ 时，两种链末端都倾向于与同种<a href="@entry_id:136559">单体</a>反应，导致形成具有“嵌段”特征的序列（blocky sequence）。</p>
 <p>为了合成结构明确的复杂结构，如长程有序的<a href="@entry_id:160725">嵌段共聚物</a>或完美的星形聚合物，需要更精密的合成策略。<strong>活性/可控聚合 (living/controlled polymerization)</strong> 提供了一种强大的工具。其核心特征是：引发速率远大于增长速率（$k_i \gg k_p[M]$），且聚合过程中几乎没有<a href="@entry_id:192941">链终止</a>和链<a href="@entry_id:159934">转移反应</a>。这使得聚合物链的“活性”得以保持 。
 这一特性使得通过<strong>顺序<a href="@entry_id:136559">单体</a>加料 (sequential monomer addition)</strong> 来构建嵌段共聚物成为可能。例如，可以先聚合<a href="@entry_id:136559">单体</a>A，待其几乎完全耗尽后，再加入<a href="@entry_id:136559">单体</a>B进行聚合，得到AB双<a href="@entry_id:160725">嵌段共聚物</a>。若接着再加入<a href="@entry_id:136559">单体</a>A，则可得到ABA三<a href="@entry_id:160725">嵌段共聚物</a>。原则上，通过重复此过程可以合成任意序列的多嵌段共聚物。每个嵌段的长度可以通过控制该步骤中消耗的<a href="@entry_id:136559">单体</a>量与<a href="@entry_id:136476">活性中心</a>（引发剂）的<a href="@entry_id:193577">摩尔比</a>来精确预测 。</p>
+<p><img alt="826738_4.png" src="826738_4.png" /></p>
 <p>除了<a href="@entry_id:148256">活性聚合</a>，另一类用于构筑复杂结构的高效工具是<strong>“<a href="@entry_id:175094">点击化学</a>” (click chemistry)</strong>。这类反应的特点是：具有很高的化学选择性（正交性）、极高的<a href="@entry_id:141402">产率</a>（接近100%）、反应条件温和且副产物极少或没有。这种近乎完美的反应效率对于合成官能度高的复杂结构至关重要。例如，要合成一个四臂星形聚合物，需要一个四官能度的核与四条臂完全反应。如果单点反应的转化率为 $p$，那么得到完美四臂产物的概率为 $p^4$。当 $p$ 从0.90提高到0.98时，完美产物的<a href="@entry_id:141402">产率</a>从 $(0.90)^4 \approx 0.66$ 跃升至 $(0.98)^4 \approx 0.92$。这种对反应转化率的指数级敏感性凸显了<a href="@entry_id:175094">点击化学</a>在高保真度大分子工程中的巨大优势 。</p>
 <h3>动态与超分子结构</h3>
 <p>传统的聚合物由稳定的<a href="@entry_id:141465">共价键</a>连接，其拓扑结构是固定的。然而，自然界和<a href="@entry_id:189310">合成化学</a>中也存在大量结构可以动态变化的聚合物体系。</p>
@@ -60,7 +63,6 @@
 <p>另一类动态网络是<strong>共价自适应网络 (covalent adaptable networks, CANs)</strong>，其<a href="@entry_id:182032">交联</a>点是可逆的<a href="@entry_id:141465">共价键</a>。根据键交换机制的不同，可以分为两类：
 - <strong>高分子玻璃体 (vitrimers)</strong>：其网络重排通过<strong>缔合交换机制 (associative exchange mechanism)</strong> 进行。在此过程中，旧键的断裂与新键的形成是协同发生的，因此网络的总交联点密度在拓扑重排过程中保持恒定。这种特性使得材料在保持网络完整性的同时，能够像液体一样流动，从而实现<a href="@entry_id:159905">应力松弛</a> 。
 - <strong>解离性动态网络 (dissociative dynamic networks)</strong>：其键交换通过<strong>解离-缔合机制 (dissociative-associative mechanism)</strong> 进行。<a href="@entry_id:182032">交联</a>键的断裂和重组是两个独立的步骤。这意味着在任何时刻，体系的瞬时<a href="@entry_id:182032">交联</a>密度都是波动的。<a href="@entry_id:159905">应力松弛</a>主要通过交联点的解离来实现，如果解离速率大于重组速率，网络可能暂时或永久性地失去其贯穿性，从凝胶态转变为溶胶态 。</p>
-<p><img alt="826738_2.png" src="826738_2.png" /></p>
 <h3>结构如何决定物理性质</h3>
 <p><a href="@entry_id:150543">高分子</a>独特的物理性质从根本上源于其链状结构和复杂的拓扑形态。</p>
 <h4>结构与链堆积：玻璃化转变</h4>
@@ -70,7 +72,6 @@
 1.  <strong>链端效应</strong>：在相同的 $M_n$ 下，一个 $f$ 臂星形聚合物比<a href="@entry_id:161615">线性聚合物</a>拥有更多的链端（$f$ 个 vs. 2个）。更多的链端意味着更多的自由体积，从而有降低 $T_g$ 的趋势。
 2.  <strong>支化点约束效应</strong>：支化点是多个长链的连接枢纽，其存在会极大地限制周围链段的运动。这种拓扑约束会阻碍链的松弛，从而有提高 $T_g$ 的趋势。</p>
 <p>这两种效应的主导作用取决于分子量。在低分子量（$M_n \ll M_e$，其中 $M_e$ 为缠结分子量）区域，链端效应占主导，因此星形聚合物的 $T_g$ 通常低于相同 $M_n$ 的<a href="@entry_id:161615">线性聚合物</a>。而在高分子量（$M_n \gg M_e$）区域，链端浓度已经很低，支化点的约束效应变得更加重要，导致星形聚合物的 $T_g$ 反而高于<a href="@entry_id:161615">线性聚合物</a> 。</p>
-<p><img alt="826738_3.png" src="826738_3.png" /></p>
 <h4>结构与熔体<a href="@entry_id:138671">流变学</a>：缠结与平台模量</h4>
 <p>当聚合物链足够长（$M_n \gg M_e$）时，它们在熔体中会像意大利面一样相互穿插、缠绕，形成拓扑约束，即<strong>缠结 (entanglements)</strong>。这些缠结点的作用类似于暂时的<a href="@entry_id:193586">物理交联</a>点，赋予熔体在特定时间尺度上类似橡胶的弹性。</p>
 <p>在黏弹性谱中，这种弹性表现为一个<strong>橡胶平台区 (rubbery plateau)</strong>，其对应的<a href="@entry_id:167228">剪切模量</a>被称为<strong>平台模量 ($G_N^0$)</strong>。平台模量是衡量材料缠结网络密度的宏观指标。根据<a href="@entry_id:188923">橡胶弹性理论</a>，平台模量与单位体积内的弹性链（即缠结链段）数量成正比。将缠结网络中的链段平均摩尔质量定义为<strong>缠结分子量 ($M_e$)</strong>，我们可以得到一个核心关系式 ：
@@ -95,7 +96,7 @@ $$ G_N^0 = \frac{\rho R T}{M_e} $$
 <p><a href="@entry_id:158978">聚合物结构</a>不仅决定了材料的宏观性能，还在控制物质的纳米级<a href="@entry_id:136432">排列</a>和界面行为方面发挥着至关重要的作用。通过设计嵌段、接枝和序列，可以在纳米尺度上构建有序结构，并调控不同组分间的相互作用。</p>
 <p><strong><a href="@entry_id:160725">嵌段共聚物</a>的<a href="@entry_id:143388">自组装</a></strong></p>
 <p>嵌段共聚物是由两种或多种化学性质不同的聚合物链段（嵌段）通过<a href="@entry_id:141465">共价键</a>连接而成的。当不同嵌段之间存在<a href="@entry_id:141121">热力学</a>不相容性时（通常用<a href="@entry_id:176674">Flory-Huggins相互作用参数</a> $\chi$ 来量化），它们会倾向于相互排斥。然而，由于嵌段被<a href="@entry_id:141465">共价键</a>束缚在一起，它们无法像简单的<a href="@entry_id:161686">聚合物共混物</a>那样发生宏观相分离，而只能在纳米尺度上进行<a href="@entry_id:160170">微相分离</a>。其结果是形成各种高度有序的纳米结构，如球形、柱状、双连续螺旋（例如，gyroid）和层状（lamellae）等。</p>
-<p><img alt="826738_4.png" src="826738_4.png" /></p>
+<p><img alt="826738_5.png" src="826738_5.png" /></p>
 <p>最终形成的平衡形貌主要由各嵌段的体积分数（$f_A$）决定，因为它决定了不同相的几何约束。而 $\chi$ 与总<a href="@entry_id:160520">聚合度</a> $N$ 的乘积 $\chi N$ 则决定了相分离的强度。在强相分离极限下（$\chi N \gg 10$），界面变得非常清晰。聚合物的分子结构也对<a href="@entry_id:144015">相图</a>有显著影响。例如，与 A-B 两嵌段共聚物相比，A-B-A 三<a href="@entry_id:160725">嵌段共聚物</a>中的中心 B 嵌段可以形成“桥联”构象，即其两端连接到两个相邻的 A 域中。在层状结构中，这种桥联构象的链拉伸惩罚远小于两嵌段的末端链，因此极大地稳定了层状相，使其在更宽的组分范围内成为优势相。这种通过结构设计精确控制<a href="@entry_id:148157">纳米结构</a>的能力，已广泛应用于<a href="@entry_id:193560">纳米光刻</a>、高性能<a href="@entry_id:196039">热塑性弹性体</a>和膜分离等领域。</p>
 <p><strong><a href="@entry_id:161686">聚合物共混物</a>与<a href="@entry_id:159382">纳米复合材料</a></strong></p>
 <p>在多组分聚合物体系中，结构同样扮演着界面调控者的角色。例如，在不相容的<a href="@entry_id:161686">聚合物共混物</a>中，直接混合通常会导致粗大的相畴和脆弱的界面，从而使材料性能劣化。为了改善相容性，可以添加少量嵌段或<a href="@entry_id:158927">接枝共聚物</a>作为“相容剂”。这些<a href="@entry_id:157928">共聚物</a>会迁移到两<a href="@entry_id:172947">相界面</a>处，其不同的链段分别伸入到各自亲和的聚合<a href="@entry_id:196677">物相</a>中，通过链缠结将两相“缝合”在一起，从而降低<a href="@entry_id:271901">界面张力</a>，增强界面粘附，细化相畴尺寸，最终提升共混物的<a href="@entry_id:201145">力学性能</a>。</p>

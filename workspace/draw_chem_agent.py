@@ -20,7 +20,6 @@ class DrawChemAgent(object):
         self.model_gemini_2_5_pro = "litellm_proxy/gemini-2.5-pro"
         self.model_gemini_3_pro = "litellm_proxy/gemini-3-pro-preview"
         self.model_gemini_3_pro_image = "litellm_proxy/gemini-3-pro-image-preview"    
-        
         self.model_kwargs = {}
 
     def get_article(self, article_id):
@@ -116,6 +115,7 @@ class DrawChemAgent(object):
             </body>
             </html>"""
         return html_template
+    
     async def produce_propmt(self, prompt: str, output_dir="") -> str:
         """
         阅读文档，从中找出需要插入图片的位置
@@ -185,7 +185,31 @@ class DrawChemAgent(object):
             print(f"An error occurred during generation: {e}")
     
     def eval_image(self, image_path, prompt):
-        pass
+        try:
+            with open(image_path, "rb") as image_file:
+                encoded_image = base64.b64encode(image_file.read()).decode('utf-8')
+            messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": prompt},
+                        {
+                            "type": "image_url",
+                            "image_url": {"url": f"data:image/jpeg;base64,{encoded_image}"}
+                        }
+                    ]
+                }
+            ]
+            response = litellm.completion(
+                model=self.model_gemini_3_pro,
+                messages=messages,
+            )
+            response = response['choices'][0]['message']['content']
+            reason = response.split("<reason>")[1].split("</reason>")[0]
+            score = float(response.split("<answer>")[1].split("</answer>")[0])
+            return {"reason": reason, "score": score}
+        except Exception as e:
+            print(f"An error occurred during evaluation: {e}")
     
 if __name__ == '__main__':
     propmt="生成两张关于气球的图片"
