@@ -203,11 +203,20 @@ class DrawChemAgent(object):
             response = litellm.completion(
                 model=self.model_gemini_3_pro,
                 messages=messages,
+                max_tokens=4096
             )
             response = response['choices'][0]['message']['content']
-            reason = response.split("<reason>")[1].split("</reason>")[0]
-            score = float(response.split("<answer>")[1].split("</answer>")[0])
-            return {"reason": reason, "score": score}
+            try:
+                response = self.parse_result(response)
+                response = json.loads(response)
+                describe = response['describe']
+                reason = response['reason']
+                score = response['score']
+                return {"describe": describe, "reason": reason, "score": score}
+            except Exception as e:
+                print(f"An error occurred during parsing: {e}")
+                return {"describe": "", "reason": "", "score": -1}
+            
         except Exception as e:
             print(f"An error occurred during evaluation: {e}")
     

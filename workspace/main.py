@@ -6,45 +6,58 @@ def clean_text(text):
     pattern = r"\(@[^:]+:[^)]*\)"
     return re.sub(pattern, "", text)
 
-def eval(agent, article_id, output_path):
+def eval(agent, article_ids, output_root_path):
+    max_tries = 3
+    for article_id in article_ids:
+        output_path = f"{output_root_path}/{article_id}"
     # root_path = f"./output/{article_id}"
-    with open(output_path + "/draw_image_prompts.txt", "r", encoding="utf-8") as f:
-        draw_image_prompts = json.load(f)
-    eval_results = []
-    total_score = 0
-    quality_num = 0
-    for index, draw_image_prompt in enumerate(draw_image_prompts):
-        image_path = f"{output_path}/{article_id}_{index}.png"
-        if not os.path.exists(image_path):
-            continue
-        try:
-            prompt = agent.get_prompt("./prompt", "eval_image.txt", {"【CONTEXT】": draw_image_prompt["context"]})
-            eval_res = agent.eval_image(image_path, prompt)
+        with open(output_path + "/draw_image_prompts.txt", "r", encoding="utf-8") as f:
+            draw_image_prompts = json.load(f)
+        eval_results = []
+        total_score = 0
+        quality_num = 0
+        for index, draw_image_prompt in enumerate(draw_image_prompts):
+            image_name = draw_image_prompt["image_name"]
+            image_path = f"{output_path}/{image_name}"
+            if not os.path.exists(image_path):
+                continue
+            
+            prompt = agent.get_prompt("./prompt", "eval_image_v2", {"【CONTEXT】": draw_image_prompt["context"]})
+            
+            for attempt in range(max_tries):
+                try:
+                    eval_res = agent.eval_image(image_path, prompt)
+                    if eval_res.get("reason") == "" or eval_res.get("describe") == "":
+                        print(f"第 {attempt + 1} 次尝试无效，重试中... 图片: {image_path}")
+                        continue
+                    else:
+                        break
+                except Exception as e:
+                    print(f"An error occurred during evaluation: {e}")
+                    continue
+
             eval_results.append({
                 "image_path": image_path,
+                "describe": eval_res["describe"],
                 "reason": eval_res["reason"],
                 "score": eval_res["score"]
             })
-            total_score += eval_res["score"]
-            quality_num += 1 if eval_res["score"] >= 2 else 0
-        except Exception as e:
-            print(f"An error occurred during evaluation: {e}")
-            continue
-    avg_score = total_score / len(eval_results)
-    with open(f"{output_path}/eval_results.md", "w", encoding="utf-8") as f:
-        json.dump(eval_results, f, indent=4, ensure_ascii=False)
-    return {
-        "quality_num": quality_num,
-        "quality_rate": round((quality_num / len(eval_results)) * 100),
-        "avg_score": round(avg_score, 2),
-    }
+            total_score += int(eval_res["score"])
+            quality_num += 1 if int(eval_res["score"]) >= 2 else 0
 
-async def main():
-    # article_ids = [826804]
-    article_ids = [826750, 826738, 826808, 826793]
-    agent = DrawChemAgent()
+        avg_score = total_score / len(eval_results)
+        with open(f"{output_path}/eval_results_v2.md", "w", encoding="utf-8") as f:
+            json.dump(eval_results, f, indent=4, ensure_ascii=False)
+        print({
+            "quality_num": quality_num,
+            "quality_rate": round((quality_num / len(eval_results)) * 100),
+            "avg_score": round(avg_score, 2),
+        })
+
+async def main(agent, article_ids, output_root_path):
+    # article_ids = [826738]
     for article_id in article_ids:
-        output_path = f"./output/has_reason/{article_id}"
+        output_path = f"{output_root_path}/{article_id}"
         os.makedirs(output_path, exist_ok=True)
         main_content, applications = agent.get_article(article_id)
         # 为句子编号
@@ -72,14 +85,20 @@ async def main():
             draw_image_prompts[index]["context"] = context
             prompt = agent.get_prompt("./prompt", "draw_by_text", {"【CONTEXT】": context, "【REASON】": draw_image_prompt["reason"]})
             await agent.produce_image(prompt, output_dir=output_path, image_name=f"{article_id}_{index}.png")
+            draw_image_prompts[index]["image_name"] = f"{article_id}_{index}.png"
             
         # 保存上下文原文
         with open(f"{output_path}/draw_image_prompts.txt", "w", encoding="utf-8") as f:
             json.dump(draw_image_prompts, f, indent=4, ensure_ascii=False)
         
-        # 自动评分
-        eval_res = eval(agent, article_id, output_path)
-        print(eval_res)
+    # # 自动评分
+    # eval_res = eval(agent, article_ids, output_root_path)
+    # print(eval_res)
         
 if __name__ == '__main__':
-    asyncio.run(main())
+    article_ids = [826750, 826738, 826808, 826793]
+    # article_ids = [826738]
+    output_root_path = "./output/has_reason"
+    agent = DrawChemAgent()
+    # asyncio.run(main(agent, article_ids, output_root_path))
+    eval(agent, article_ids, output_root_path)
